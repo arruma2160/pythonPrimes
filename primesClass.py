@@ -19,12 +19,12 @@ class Primes(metaclass = ABCMeta):
         """
             :arg    limit ( int ): calculate primes till 'limit' with limit included
         """
-        self.primes = []
+        self.primes = [1]
         self.limit = limit
         self.time_exec = 0.0
 
         start           = timeit.default_timer()
-        self.primes     = self.__algorithm_primes (  )
+        self.primes     = self.primes + self.__algorithm_primes (  )
         self.time_exec  = timeit.default_timer() - start
 
     @abstractmethod
@@ -43,3 +43,8 @@ class Primes(metaclass = ABCMeta):
             :returns    primes(list): list of primes calculated up till limit
         """
         pass
+    def execution_time (self):
+        """
+            Getter for time of execution
+        """
+        return self.time_exec
