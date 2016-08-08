@@ -8,3 +8,5 @@ for prime in erastosthenes:
     print (prime, end=" ")
 
 print()
+
+print ("erastosthenes.time_exec = " + str( erastosthenes.execution_time()) )
