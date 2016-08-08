@@ -3,6 +3,17 @@
 from primesClass import Primes
 
 class Erastosthenes ( Primes ):
+    """
+        Definition of a concrete class for calculation of prime numbers
+        Follows the algorithm for calculation of prime numbers given by Erastosthenes
+        Attributes:
+            limit       (int):      calculate primes up till this parameter
+        Example of use:
+            Erastosthenes( 100 ) -> it calculates the primes using the algorithm of Erastosthenes till 100
+        Exposed methods:
+            __iter__ ()      -> yields the prime numbers calculated (concrete method)
+            execution_time() -> returns the time that it has taken to calculate the prime numbers (inherited method)
+    """
     
     def __init__ ( self, limit ):
         super().__init__ ( limit )
