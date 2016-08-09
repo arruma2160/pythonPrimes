@@ -3,7 +3,7 @@
 from Erastosthenes import Erastosthenes
 from Sundaram import Sundaram
 
-erastosthenes = Erastosthenes(100000)
+erastosthenes = Erastosthenes(100)
 
 for prime in erastosthenes:
     print (prime, end=" ")
@@ -11,14 +11,16 @@ for prime in erastosthenes:
 print()
 
 print ("erastosthenes.time_exec = " + str( erastosthenes.execution_time()) )
+print ("Highest prime erastosthenes = " + str( erastosthenes.max_prime() ) )
 
 
 print ( " ==================== " )
 
-sundaram = Sundaram(100000)
+sundaram = Sundaram(100)
 for prime in sundaram:
     print ( prime, end = " " )
 
 print()
 
 print ("sundaram.time_exec = " + str( sundaram.execution_time() ) )
+print ("Highest prime sundaram = " + str( sundaram.max_prime() ) )

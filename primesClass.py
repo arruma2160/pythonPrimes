@@ -44,8 +44,15 @@ class Primes(metaclass = ABCMeta):
             :returns    primes(list): list of primes calculated up till limit
         """
         pass
+
     def execution_time (self):
         """
             Getter for time of execution
         """
         return self.time_exec
+
+    def max_prime ( self ):
+        """
+            Getter for maximum prime in list of primes
+        """
+        return self.primes[-1]
