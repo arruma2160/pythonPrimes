@@ -14,6 +14,7 @@ class Primes(metaclass = ABCMeta):
             - __iter__
             - __algorithm_primes (Abstract method)
             - execution_time 
+            - max_prime
     """
 
     def __init__ (self, limit):

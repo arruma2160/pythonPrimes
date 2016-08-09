@@ -13,6 +13,7 @@ class Erastosthenes ( Primes ):
         Exposed methods:
             __iter__ ()      -> yields the prime numbers calculated (concrete method)
             execution_time() -> returns the time that it has taken to calculate the prime numbers (inherited method)
+            max_prime()      -> returns the highest prime in the list (inherited method)
     """
     
     def __init__ ( self, limit ):
