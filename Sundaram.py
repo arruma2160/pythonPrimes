@@ -18,7 +18,15 @@ class Sundaram ( Primes ):
         super().__init__ ( limit )
 
     def _Primes__algorithm_primes ( self ):
-        pass
+        numbers = set ( range ( 2, self.limit ) )
+        n = (self.limit - 2 )//2
+        for i in range ( 1, n + 1 ):
+            j = i
+            while ( i + j + 2*i*j ) <= n :
+                numbers.discard ( i + j + 2*i*j )
+                j += 1
+        primes = [2] + [ 2*x + 1 for x in numbers if 2*x + 1 < self.limit ] 
+        return primes
 
     def __iter__ ( self ):
         for prime in self.primes:
