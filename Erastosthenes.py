@@ -20,7 +20,7 @@ class Erastosthenes ( Primes ):
         super().__init__ ( limit )
 
 
-    def _Primes__algorithm_primes ( self ):
+    def _algorithm_primes ( self ):
         numbers = set (range(2,self.limit))
         result  = []
         while ( True ):

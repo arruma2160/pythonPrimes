@@ -26,7 +26,7 @@ class Primes(metaclass = ABCMeta):
         self.time_exec = 0.0
 
         start           = timeit.default_timer()
-        self.primes     = self.primes + self.__algorithm_primes (  )
+        self.primes     = self.primes + self._algorithm_primes (  )
         self.time_exec  = timeit.default_timer() - start
 
     @abstractmethod
@@ -37,7 +37,7 @@ class Primes(metaclass = ABCMeta):
         yield None
 
     @abstractmethod
-    def __algorithm_primes (self):
+    def _algorithm_primes (self):
         """
             Private method that needs to be implemented in the subclasses.
             Carries out the calculation of the primes' list 

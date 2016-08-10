@@ -18,7 +18,7 @@ class Sundaram ( Primes ):
     def __init ( self, limit ):
         super().__init__ ( limit )
 
-    def _Primes__algorithm_primes ( self ):
+    def _algorithm_primes ( self ):
         numbers = set ( range ( 2, self.limit ) )
         n = (self.limit - 2 )//2
         for i in range ( 1, n + 1 ):
