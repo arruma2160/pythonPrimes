@@ -26,7 +26,7 @@ class Sundaram ( Primes ):
             while ( i + j + 2*i*j ) <= n :
                 numbers.discard ( i + j + 2*i*j )
                 j += 1
-        primes = [2] + [ 2*x + 1 for x in numbers if 2*x + 1 < self.limit ] 
+        primes = [2,3] + [ 2*x + 1 for x in numbers if 2*x + 1 < self.limit ] 
         return primes
 
     def __iter__ ( self ):
